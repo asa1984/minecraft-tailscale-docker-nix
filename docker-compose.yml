@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  mc:
+    image: minecraft-tailscale-docker-nix
+    container_name: mc
+    env_file:
+      - .env
+    volumes:
+      - ./server:/server
