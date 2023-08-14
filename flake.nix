@@ -22,7 +22,7 @@
         };
         startup = ''
           ${pkgs.tailscale}/bin/tailscaled --tun=userspace-networking --state=/var/lib/tailscale/tailscaled.state --socket=/var/run/tailscale/tailscaled.sock --socks5-server=localhost:1080 &
-          ${pkgs.tailscale}/bin/tailscale up --authkey=$TAILSCALE_AUTH_KEY --hostname=$TAILSCALE_HOSTNAME
+          ${pkgs.tailscale}/bin/tailscale up --authkey=$TAILSCALE_AUTH_KEY --hostname=$TAILSCALE_HOST_NAME
           ${papermc}/bin/minecraft-server -DsocksProxyHost=localhost -DsocksProxyPort=1080
         '';
       in {

@@ -20,7 +20,7 @@ You can follow Step 1 of the guide on [Tailscale on Fly.io](https://tailscale.co
 
 ```env
 TAILSCALE_AUTH_KEY=<Your auth key>
-TAILSCALE_HOSTNAME=minecraft-tailscale-docker-nix # Change as you like
+TAILSCALE_HOST_NAME=minecraft-tailscale-docker-nix # Change as you like
 ```
 
 3. Build and load docker image:
@@ -53,7 +53,7 @@ docker compose up -d
 
 And that's it! You can now start Minecraft and access the server.
 
-If you have enabled [MagicDNS](https://tailscale.com/kb/1081/magicdns/), you can use the `TAILSCALE_HOSTNAME` instead of an IP address.
+If you have enabled [MagicDNS](https://tailscale.com/kb/1081/magicdns/), you can use the `TAILSCALE_HOST_NAME` instead of an IP address.
 
 ![Edit Server Info](./_img/multiplay.png)
 
